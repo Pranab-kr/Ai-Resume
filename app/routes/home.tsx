@@ -1,7 +1,7 @@
-
 import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router";
-import { usePuterStore } from "~/lib/Puter";import NavBar from "~/components/NavBar";
+import { useNavigate } from "react-router";
+import { usePuterStore } from "~/lib/Puter";
+import NavBar from "~/components/NavBar";
 import type { Route } from "./+types/home";
 import { resumes } from "~/constants";
 import ResumeCard from "~/components/ResumeCard";
@@ -18,7 +18,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!auth.isAuthenticated) navigate('/auth?next=/');
+    if (!auth.isAuthenticated) navigate("/auth?next=/");
   }, [auth.isAuthenticated]);
 
   return (
