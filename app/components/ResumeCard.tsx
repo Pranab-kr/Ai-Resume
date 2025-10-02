@@ -9,7 +9,7 @@ const ResumeCard = ({
   resume: Resume;
 }) => {
   const { fs } = usePuterStore();
-  const [resumeUrl, setResumeUrl] = useState<String>("");
+  const [resumeUrl, setResumeUrl] = useState("");
 
   useEffect(() => {
     const loadResume = async () => {
@@ -45,7 +45,7 @@ const ResumeCard = ({
         </div>
       </div>
       {resumeUrl && (
-        <div className="gardient-border animate-in fade-in duration-1000">
+        <div className="gradient-border animate-in fade-in duration-800">
           <div className="w-full h-full">
             <img
               src={resumeUrl}
